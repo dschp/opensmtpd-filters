@@ -145,7 +145,12 @@ func checkSPF(ip net.IP, from, helo string) string {
 		domain := parts[1]
 		if domain != "" {
 			h := ""
-			if r, err := spf.CheckHostWithSender(ip, helo, from); err == nil {
+			r, err := spf.CheckHostWithSender(ip, helo, from)
+			if r != "pass" {
+				filter.Junk()
+			}
+
+			if err == nil {
 				h = fmt.Sprintf("\tspf=%s (sender IP is %s) smtp.mailfrom=%s helo=%s;", r, ip, from, helo)
 			} else {
 				h = fmt.Sprintf("\tspf=%s (sender IP is %s) smtp.mailfrom=%s helo=%s (%s);", r, ip, from, helo, err)
@@ -174,6 +179,7 @@ func verifyDKIM(message, msgId string) []string {
 				h = fmt.Sprintf("\tdkim=pass (d=%s, i=%s, s=%s);", v.Domain, v.Identifier, v.Selector)
 			} else {
 				h = fmt.Sprintf("\tdkim=fail (d=%s, i=%s, s=%s) %s;", v.Domain, v.Identifier, v.Selector, v.Err)
+				filter.Junk()
 
 				msgFile := "/tmp/mail-" + msgId
 				if err := os.WriteFile(msgFile, []byte(message), 0666); err == nil {
