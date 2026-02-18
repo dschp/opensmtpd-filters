@@ -1,9 +1,9 @@
 blitiri.com.ar/go/spf v1.5.1 h1:CWUEasc44OrANJD8CzceRnRn1Jv0LttY68cYym2/pbE=
 blitiri.com.ar/go/spf v1.5.1/go.mod h1:E71N92TfL4+Yyd5lpKuE9CAF2pd4JrUq1xQfkTxoNdk=
+github.com/dschp/go-msgauth v0.0.0-20260218060320-168fe64930f3 h1:CorvfGkmOXmO6jGSgCwHujG4gx+IZ6P2ElsskgWFY+0=
+github.com/dschp/go-msgauth v0.0.0-20260218060320-168fe64930f3/go.mod h1:PqjfA9As02cQDXXBZAuqhMyOAdiSRYwvg/ZEuowHGCE=
 github.com/emersion/go-msgauth v0.7.0 h1:vj2hMn6KhFtW41kshIBTXvp6KgYSqpA/ZN9Pv4g1INc=
 github.com/emersion/go-msgauth v0.7.0/go.mod h1:mmS9I6HkSovrNgq0HNXTeu8l3sRAAuQ9RMvbM4KU7Ck=
-github.com/ooweyy/go-msgauth v0.0.0-20260204055113-511f681f4a9b h1:JILGTVZViO5hMEMVHMhrURE0gSLJUjogazc7gxGDJ2U=
-github.com/ooweyy/go-msgauth v0.0.0-20260204055113-511f681f4a9b/go.mod h1:SQiFmgHU/P+RsQXL6WHdaghgflT1O/I4iHcFSeUd9M4=
 github.com/poolpOrg/OpenSMTPD-framework v0.1.9 h1:H9wjBOEZSUFCDVIfYyTmiPis5h4QjvZBC9ZqnjMmzWU=
 github.com/poolpOrg/OpenSMTPD-framework v0.1.9/go.mod h1:e4lU170JDDT6/9XFv/Qw9+K0UU+L+T5EgXLE4n1Sgpc=
 golang.org/x/crypto v0.37.0 h1:kJNSjF/Xp7kU0iB2Z+9viTPMW4EqqsrywMXLJOOsXSE=
